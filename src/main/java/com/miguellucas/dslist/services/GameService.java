@@ -21,7 +21,7 @@ public class GameService {
        Game result = gameRepository.findById(id).get();
        return new GameDTO(result);
     }
-    
+
     public List<GameMinDTO> findAll(){
         List<Game> result = gameRepository.findAll();
         return result.stream().map(x -> new GameMinDTO(x)).toList();
